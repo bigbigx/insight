@@ -14,6 +14,7 @@ from random import shuffle
 import re
 import sys
 import os
+from .. import csrf
 
 
 def cur_file_dir():
@@ -79,7 +80,7 @@ def login():
 
 # 最后返回文件名
 
-
+@csrf.exempt
 @drops.route('/upload_img', methods=['POST'])
 @permission_required('src.upload_img')
 # def upload_img():
@@ -127,7 +128,7 @@ def search(pageid=1):
     searchword = searchword.strip()
     if not searchword:
         flash(u'没找到结果!')
-        redirect(url_for('drops.index'))
+        return redirect(url_for('drops.index'))
 
     searchresult = Postdrop.query.search(searchword)
 
@@ -559,8 +560,6 @@ def editdrops(id):
 @permission_required('drops.manager')
 def deldrop(id):
     droppost_del = Postdrop.query.get_or_404(id)
-    dropcmt_del = Postdrop.query.filter_by(comt_id=id)
-    db.session.delete(dropcmt_del)
     db.session.delete(droppost_del)
     flash(u'删除成功')
     return redirect(url_for('drops.readdrops'))

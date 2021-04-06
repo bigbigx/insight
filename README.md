@@ -1,3 +1,7 @@
+洞察1已停止维护，请移步[洞察2](https://github.com/creditease-sec/insight2).
+
+---
+
 # 洞察 [![License](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/creditease-sec/insight/blob/open-source/LICENSE)
 
 洞察是宜信安全部用来对公司内部系统所出现的安全漏洞进行线上全生命周期管理的漏洞管理平台。
@@ -22,7 +26,7 @@
 ## 部署指南
 
 [![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)](https://www.python.org/)
-[![MySQL 5.6.27](https://img.shields.io/badge/mysql-5.6.27-orange.svg)](https://www.mysql.com)
+[![MySQL 5.7.13](https://img.shields.io/badge/mysql-5.7.13-orange.svg)](https://www.mysql.com)
 [![Flask 0.11.1](https://img.shields.io/badge/flask-0.11.1-yellow.svg)](https://github.com/pallets/flask)
 [![Docker 1.13.0](https://img.shields.io/badge/docker-1.13.0-blue.svg)](https://www.docker.com/)
 
@@ -93,6 +97,6 @@
 
 欢迎安全小伙伴使用、交流、fork、star、转发。
 
-也欢迎安全小伙伴在使用洞察过程中和我们多多交流，扫描下方二维码，关注宜信安全应急响应中心公众号，回复“自己的微信号+洞察”，我们的运营小姐姐九色鹿会拉你进群讨论。
+也欢迎安全小伙伴在使用洞察过程中和我们多多交流，扫描下方二维码，关注宜信安全应急响应中心公众号，回复“自己的微信号+洞察”，我们的运营小姐姐会拉你进群讨论。
 
 ![](docs/pics/CESRC.jpeg)

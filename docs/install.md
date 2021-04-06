@@ -1,12 +1,12 @@
 ## 部署和启动mysql
 
 ```
-docker pull mysql
+docker pull mysql:5.7.13
 
 docker run -d -p 127.0.0.1:6606:3306 \
 --name open_source_mysqldb \
 -e MYSQL_ROOT_PASSWORD=root \
-mysql
+mysql:5.7.13
 ```
 
 ## 创建数据库和账号权限配置
@@ -128,7 +128,7 @@ docker pull daocloud.io/liusheng/vulpm_docker:latest
 自己构建镜像
 docker build -t='vulpm_docker' .
 
-# 启动容器，MAIL_PASSOWRD替换为自己邮箱服务器的密码。
+# 在项目目录下启动容器，确保当前目录下存在srcpm文件夹，MAIL_PASSOWRD替换为自己邮箱服务器的密码。
 $ docker run -d -p 127.0.0.1:9000:5000 \
 --link open_source_mysqldb:db \
 --name open_source_srcpm \
